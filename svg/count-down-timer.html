@@ -1,0 +1,169 @@
+<html>
+<head>
+    <title>Adobe Captivate CDK Timer Web Object</title>
+    <link rel="stylesheet" href="../lib/css/bootstrap-3.3.6.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="container">
+    <div class="row content-holder">
+        <form class="form-horizontal">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h4>Dimensions</h4>
+                        <hr />
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <div class="col-xs-4 label-container">
+                                <label class="control-label" for="input_width">Width</label>
+                            </div>
+                            <div class="col-xs-8">
+                                <input id="input_width" title="Graphics canvas size min: 1, max: 800" required class="form-control" min="1" max="800" type="number" value="100" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <div class="col-xs-4 label-container">
+                                <label class="control-label" for="input_ring_width">Ring Width</label>
+                            </div>
+                            <div class="col-xs-8">
+                                <input id="input_ring_width" title="Circle Ring Width min: 1, max: 400" required class="form-control" min="1" max="400" type="number" value="15" />
+                                <label class="checkbox-inline" title="When checked gives border for the ring">
+                                    <input id="input_has_ring_border" checked="checked" type="checkbox" /> Enable Ring Border
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <div class="col-xs-4 label-container">
+                                <label class="control-label" for="input_font_size">Font Size</label>
+                            </div>
+                            <div class="col-xs-8">
+                                <input id="input_font_size" title="Centre countdown timer font size min: 1, max: 60" required class="form-control" min="1" max="60" type="number" value="20" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <h4>Durations</h4>
+                        <hr />
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <div class="col-xs-4 label-container">
+                                <label class="control-label" for="input_seconds">Run For</label>
+                            </div>
+                            <div class="col-xs-8">
+                                <input id="input_seconds" title="Run time min: 1 sec" required class="form-control" min="1" type="number" value="60" />
+                                <label class="checkbox-inline" title="When checked the timer counts down">
+                                    <input id="input_dec_count" checked="checked" type="checkbox" /> Count Down
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <div class="col-xs-4 label-container">
+                                <label class="control-label" for="input_interval">Interval</label>
+                            </div>
+                            <div class="col-xs-8">
+                                <input id="input_interval" title="Countdown Timer Interval min: 1 sec, max: 30 sec" required class="form-control" min="1" max="30" type="number" value="1" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <h4>Colors</h4>
+                        <hr />
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <div class="col-xs-4 label-container">
+                                <label class="control-label" for="input_color">Circle Color</label>
+                            </div>
+                            <div class="col-xs-8">
+                                <input id="input_color" title="Color for timer ring give hex code (#rrggbb) format" required pattern="/^#[0-9a-fA-F]{6}$/" class="form-control" type="text" value="#82c600" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <div class="col-xs-4 label-container">
+                                <label class="control-label" for="input_bg_color">Bg Color</label>
+                            </div>
+                            <div class="col-xs-8">
+                                <input id="input_bg_color" title="background color for ring give hex code (#rrggbb) format" required pattern="/^#[0-9a-fA-F]{6}$/" class="form-control" type="text" value="#333333" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="form-group">
+                            <div class="col-xs-4 label-container">
+                                <label class="control-label" for="input_font_color">Font Color</label>
+                            </div>
+                            <div class="col-xs-8">
+                                <input id="input_font_color" title="Color for Count Down Seconds hex code (#rrggbb) format" required pattern="/^#[0-9a-fA-F]{6}$/" class="form-control" type="text" value="#333333" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="form-buttons col-xs-12">
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <input type="button" title="Preview Timer" id="previewGenerateMarkup" class="btn btn-primary" value="Generate Preview">
+                                <input type="button" title="Generate Preview to see Markup" id="toggleMarkup" class="btn btn-default" value="Show /Hide Markup">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="col-xs-12 form-horizontal">
+            <div class="row" id="preview">
+                <div class="col-xs-12">
+                    <h4>Preview</h4>
+                    <hr />
+                </div>
+                <div id="svgContainer" class="col-xs-12">
+                </div>
+            </div>
+            <div class="row" id="markup">
+                <div class="col-xs-12">
+                    <h4>Mark Up for Adobe Captivate Web Object</h4>
+                    <hr />
+                </div>
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <div class="col-xs-12 text-right">
+                            <input type="button" class="btn btn-default" title="Click to copy markup to Clipboard" id="copyMarkup" value="Copy Markup to Clipboard" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div id="svgMarkupContainer" class="col-xs-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="errors">
+                <div class="col-xs-12">
+                    <h4>Errors</h4>
+                    <hr />
+                    <div id="errors-list" class="errors-list-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../lib/js/jquery-1.12.1.min.js"></script>
+    <script src="../lib/js/bootstrap-3.3.6.min.js"></script>
+    <script src="../lib/js/underscore-1.8.3.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+body {
+    background-color: #eeeeee;
+}
+
+.content-holder {
+    background-color: #ffffff;
+    padding: 30px 0;
+    min-height: 100%;
+}
+
+.label-container {
+    text-align: right;
+    font-weight: normal;
+}
+
+    .label-container label.control-label {
+        padding-top: 7px;
+    }
+
+.form-buttons {
+    text-align: right;
+    margin-top: 40px;
+}
+
+hr {
+    margin-top: 0;
+    border-top-color: #cccccc;
+}
+
+.errors-list-container a.list-group-item {
+    -ms-border-radius: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+
+#svgContainer {
+    text-align: center;
+}
+
+#output,
+#errors {
+    display: none;
+}
