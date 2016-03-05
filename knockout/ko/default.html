@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <meta name="generator" content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <link rel="stylesheet" type="text/css" href="../libs/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="mystyles.css" />
+    <title>ko templates</title>
+  </head>
+  <body id="ko-example">
+    <div class="container">
+      <div class="col-lg-12">
+        <div class="form-horizontal">
+          <div class="form-group">
+            <div class="col-lg-offset-1 col-lg-8">
+              <label class="control-label">
+                            carousel template
+                        </label>
+			<div data-bind="carousel: carousalmodal"></div>
+            </div>
+          </div>
+          <div class="form-group" style="display: none">
+            <div class="col-lg-offset-1 col-lg-8">
+              <label class="control-label">
+                            progress bar template
+                        </label>
+              <div data-bind="progress: progressmodal"></div>
+            </div>
+            <div class="col-lg-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+    <script type="text/html" id="carousel-default-item">
+        <div class="onhover-delete text-center">
+		  <span class="glyphicon glyphicon-trash delete-icon" style="display: none" aria-hidden="true" data-bind="click: $root.deleteCarouselItem, attr: { 'data-alldel': $root.allowDelete, 'data-iter': $index }"></span>
+          <label data-bind="text: $data.props.Id" style="border-radius: 50%; width: 100px; height: 100px; background-color: #666666; font-size: 70px;"></label>
+          <br />
+		  <span data-bind="text: $data.message" style="color: black;"></span>
+        </div>
+    </script>
+    
+	<script type="text/html" id="tpl-carousel-main">
+        <ol class="carousel-indicators" data-bind="visible: props.showIndicatorControls, css: { numbers: props.showIndicatorsAsNumbers } ,foreach: { data: Slides, as: 'slide' }">
+          <li data-bind="attr: { 'data-target': $parent.props.carouselTarget, 'data-slide-to': $index }, click: $parent.events.onIndicatorControlClick ">
+		  <span data-bind="visible: $parent.props.showIndicatorsAsNumbers, text: $index"></span></li>
+        </ol>
+        <div class="carousel-inner" role="listbox" data-bind="foreach: { data: Slides, as : 'slide' }">
+          <div data-bind="css: slide.props.cssClass, foreach: { data: slide.Items, as: 'item' }, style: { padding: $parent.props.carouselInnerPadding }">
+			  <div data-bind="css: item.props.cssClass, attr: { 'data-indexor': item.props.index, 'data-unique': item.props.Id, 'data-templateId': item.props.templateId }, template: { name: item.props.templateId, data: item }">
+			  </div>
+          </div>
+        </div>
+        <a class="left carousel-control" data-bind="visible: props.sliderControlsVisible , attr: { href: props.carouselTarget }, style: { width: props.carouselControlWidth }" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" data-bind="visible: props.sliderControlsVisible , attr: { href: props.carouselTarget }, style: { width: props.carouselControlWidth }" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </script>	
+	
+	<script  type="text/html" id="tpl-carousel-item-def">
+		<div data-bind="text: message"></div>
+	</script>
+    <script type="text/javascript" src="../libs/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../libs/knockout-3.0.0.js"></script>
+    <script type="text/javascript" src="ko-custom.js"></script>
+    <script type="text/javascript" src="ko-progressbar.js"></script>
+    <script type="text/javascript" src="ko-carousel.js"></script>
+    <script type="text/javascript" src="myscripts.js"></script>
+  </body>
+</html>
