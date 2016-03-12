@@ -1,0 +1,96 @@
+<svg width="300" height="300">
+	<defs>
+		<filter id="MyFilter" filterUnits="userSpaceOnUse" >
+			<feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"/>
+			<feSpecularLighting in="blur" surfaceScale="6" specularConstant=".35" specularExponent="10" lighting-color="#bbbbbb" result="specOut">
+				<fePointLight x="-5000" y="-10000" z="20000"/>
+			</feSpecularLighting>
+			<feComposite operator="arithmetic" in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
+			<feMerge>
+				<feMergeNode in="offsetBlur"/>
+				<feMergeNode in="litPaint"/>
+			</feMerge>
+		</filter>
+	</defs>
+	<circle r="100" cx="150" cy="150" stroke="brown" stroke-width="15" fill="none">
+	</circle>
+	<circle r="60" cx="150" cy="150" stroke="black" stroke-width="2" fill="none">
+	</circle>
+	<circle r="55" cx="150" cy="150" stroke="black" stroke-width="1" fill="none">
+	</circle>
+	<circle r="10" cx="150" cy="150" stroke="black" stroke-width="1" fill="none">
+	</circle>
+	<!--
+	<path transform="rotate(-90, 150, 150)" fill="white" stroke="black" stroke-width="1" d="M150 150 L195 145 L205 150 L195 155 L150 150">
+		<animateTransform attributeType="XML" type="rotate" attributename="transform" from="-90, 150, 150" to="270, 150, 150" dur="12h" repeatCount="indefinite" />
+	 </path>
+	 <path transform="rotate(-90, 150, 150)" fill="white" stroke="black" stroke-width="1" d="M150 150 L210 147 L225 150 L210 153 L150 150">
+		<animateTransform attributeType="XML" type="rotate" attributename="transform" from="-90, 150, 150" to="270, 150, 150" dur="1h" repeatCount="indefinite" />
+	 </path>
+	 <path transform="rotate(-90, 150, 150)" fill="white" stroke="black" stroke-width="1" d="M150 150 L170 148 L235 150 L170 152 L150 150" >
+		<animateTransform attributeType="XML" type="rotate" attributename="transform" from="-90, 150, 150" to="270, 150, 150" dur="60s" repeatCount="indefinite" />
+	 </path>
+	 -->
+	 <line stroke="black" stroke-width="1" x1="150" y1="150" x2="150" y2="50" >
+		<animateTransform id="#s00" attributeType="XML" type="rotate" attributeName="transform" from="000,150,150;" to="006,150,150;" begin="0s;#s59.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s01" attributeType="XML" type="rotate" attributeName="transform" from="006,150,150;" to="012,150,150;" begin="#s00.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s02" attributeType="XML" type="rotate" attributeName="transform" from="012,150,150;" to="018,150,150;" begin="#s01.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s03" attributeType="XML" type="rotate" attributeName="transform" from="018,150,150;" to="024,150,150;" begin="#s02.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s04" attributeType="XML" type="rotate" attributeName="transform" from="024,150,150;" to="030,150,150;" begin="#s03.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s05" attributeType="XML" type="rotate" attributeName="transform" from="030,150,150;" to="036,150,150;" begin="#s04.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s06" attributeType="XML" type="rotate" attributeName="transform" from="036,150,150;" to="042,150,150;" begin="#s05.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s07" attributeType="XML" type="rotate" attributeName="transform" from="042,150,150;" to="048,150,150;" begin="#s06.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s08" attributeType="XML" type="rotate" attributeName="transform" from="048,150,150;" to="054,150,150;" begin="#s07.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s09" attributeType="XML" type="rotate" attributeName="transform" from="054,150,150;" to="060,150,150;" begin="#s08.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s10" attributeType="XML" type="rotate" attributeName="transform" from="060,150,150;" to="066,150,150;" begin="#s09.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s11" attributeType="XML" type="rotate" attributeName="transform" from="066,150,150;" to="072,150,150;" begin="#s10.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s12" attributeType="XML" type="rotate" attributeName="transform" from="072,150,150;" to="078,150,150;" begin="#s11.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s13" attributeType="XML" type="rotate" attributeName="transform" from="078,150,150;" to="084,150,150;" begin="#s12.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s14" attributeType="XML" type="rotate" attributeName="transform" from="084,150,150;" to="090,150,150;" begin="#s13.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s15" attributeType="XML" type="rotate" attributeName="transform" from="090,150,150;" to="096,150,150;" begin="#s14.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s16" attributeType="XML" type="rotate" attributeName="transform" from="096,150,150;" to="102,150,150;" begin="#s15.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s17" attributeType="XML" type="rotate" attributeName="transform" from="102,150,150;" to="108,150,150;" begin="#s16.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s18" attributeType="XML" type="rotate" attributeName="transform" from="108,150,150;" to="114,150,150;" begin="#s17.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s19" attributeType="XML" type="rotate" attributeName="transform" from="114,150,150;" to="120,150,150;" begin="#s18.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s20" attributeType="XML" type="rotate" attributeName="transform" from="120,150,150;" to="126,150,150;" begin="#s19.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s21" attributeType="XML" type="rotate" attributeName="transform" from="126,150,150;" to="132,150,150;" begin="#s20.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s22" attributeType="XML" type="rotate" attributeName="transform" from="132,150,150;" to="138,150,150;" begin="#s21.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s23" attributeType="XML" type="rotate" attributeName="transform" from="138,150,150;" to="144,150,150;" begin="#s22.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s24" attributeType="XML" type="rotate" attributeName="transform" from="144,150,150;" to="150,150,150;" begin="#s23.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s25" attributeType="XML" type="rotate" attributeName="transform" from="150,150,150;" to="156,150,150;" begin="#s24.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s26" attributeType="XML" type="rotate" attributeName="transform" from="156,150,150;" to="162,150,150;" begin="#s25.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s27" attributeType="XML" type="rotate" attributeName="transform" from="162,150,150;" to="168,150,150;" begin="#s26.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s28" attributeType="XML" type="rotate" attributeName="transform" from="168,150,150;" to="174,150,150;" begin="#s27.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s29" attributeType="XML" type="rotate" attributeName="transform" from="174,150,150;" to="180,150,150;" begin="#s28.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s30" attributeType="XML" type="rotate" attributeName="transform" from="180,150,150;" to="186,150,150;" begin="#s29.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s31" attributeType="XML" type="rotate" attributeName="transform" from="186,150,150;" to="192,150,150;" begin="#s30.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s32" attributeType="XML" type="rotate" attributeName="transform" from="192,150,150;" to="198,150,150;" begin="#s31.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s33" attributeType="XML" type="rotate" attributeName="transform" from="198,150,150;" to="204,150,150;" begin="#s32.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s34" attributeType="XML" type="rotate" attributeName="transform" from="204,150,150;" to="210,150,150;" begin="#s33.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s35" attributeType="XML" type="rotate" attributeName="transform" from="210,150,150;" to="216,150,150;" begin="#s34.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s36" attributeType="XML" type="rotate" attributeName="transform" from="216,150,150;" to="222,150,150;" begin="#s35.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s37" attributeType="XML" type="rotate" attributeName="transform" from="222,150,150;" to="228,150,150;" begin="#s36.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s38" attributeType="XML" type="rotate" attributeName="transform" from="228,150,150;" to="234,150,150;" begin="#s37.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s39" attributeType="XML" type="rotate" attributeName="transform" from="234,150,150;" to="240,150,150;" begin="#s38.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s40" attributeType="XML" type="rotate" attributeName="transform" from="240,150,150;" to="246,150,150;" begin="#s39.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s41" attributeType="XML" type="rotate" attributeName="transform" from="246,150,150;" to="252,150,150;" begin="#s40.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s42" attributeType="XML" type="rotate" attributeName="transform" from="252,150,150;" to="258,150,150;" begin="#s41.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s43" attributeType="XML" type="rotate" attributeName="transform" from="258,150,150;" to="264,150,150;" begin="#s42.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s44" attributeType="XML" type="rotate" attributeName="transform" from="264,150,150;" to="270,150,150;" begin="#s43.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s45" attributeType="XML" type="rotate" attributeName="transform" from="270,150,150;" to="276,150,150;" begin="#s44.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s46" attributeType="XML" type="rotate" attributeName="transform" from="276,150,150;" to="282,150,150;" begin="#s45.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s47" attributeType="XML" type="rotate" attributeName="transform" from="282,150,150;" to="288,150,150;" begin="#s46.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s48" attributeType="XML" type="rotate" attributeName="transform" from="288,150,150;" to="294,150,150;" begin="#s47.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s49" attributeType="XML" type="rotate" attributeName="transform" from="294,150,150;" to="300,150,150;" begin="#s48.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s50" attributeType="XML" type="rotate" attributeName="transform" from="300,150,150;" to="306,150,150;" begin="#s49.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s51" attributeType="XML" type="rotate" attributeName="transform" from="306,150,150;" to="312,150,150;" begin="#s50.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s52" attributeType="XML" type="rotate" attributeName="transform" from="312,150,150;" to="318,150,150;" begin="#s51.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s53" attributeType="XML" type="rotate" attributeName="transform" from="318,150,150;" to="324,150,150;" begin="#s52.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s54" attributeType="XML" type="rotate" attributeName="transform" from="324,150,150;" to="330,150,150;" begin="#s53.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s55" attributeType="XML" type="rotate" attributeName="transform" from="330,150,150;" to="336,150,150;" begin="#s54.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s56" attributeType="XML" type="rotate" attributeName="transform" from="336,150,150;" to="342,150,150;" begin="#s55.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s57" attributeType="XML" type="rotate" attributeName="transform" from="342,150,150;" to="348,150,150;" begin="#s56.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s58" attributeType="XML" type="rotate" attributeName="transform" from="348,150,150;" to="354,150,150;" begin="#s57.begin+1s" dur="0s" repeatCount="indefinite" />
+		<animateTransform id="#s59" attributeType="XML" type="rotate" attributeName="transform" from="354,150,150;" to="360,150,150;" begin="#s58.begin+1s" dur="0s" repeatCount="indefinite" />
+	 </path>                                                                                                                               
+</svg>
